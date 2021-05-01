@@ -10,16 +10,17 @@ object matrix_multiplication_spark{
 		}
 		
 		val executions = 1000
-		val n = 1000
-		val array_1 = fill_array(n, n, 100)
-		val array_2 = fill_array(n, n, 100)
+		val mat_A_num_rows = args(0).toInt
+        	val mat_A_num_cols = args(1).toInt
+        	val mat_B_num_rows = args(2).toInt
+        	val mat_B_num_cols = args(3).toInt
 
-		//var result = array_1.multiply(array_2)
-		//println(result)
-        val result = 0
+        	val mat_A = fill_array(mat_A_num_rows, mat_A_num_cols, 100)
+        	val mat_B = fill_array(mat_B_num_rows, mat_B_num_cols, 100)
+		
 		val start = System.currentTimeMillis()
 		for (_ <- 1 to executions)
-			result = array_1.multiply(array_2)
+			val result = array_1.multiply(array_2)
 		val end = System.currentTimeMillis()
 
 		val average = (end-start)/1000
