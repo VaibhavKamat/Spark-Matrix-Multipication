@@ -1,5 +1,4 @@
 
-package com.disml
 import org.apache.spark.mllib.linalg.DenseMatrix
 
 object matrix_multiplication_spark{
@@ -17,13 +16,13 @@ object matrix_multiplication_spark{
 
 		//var result = array_1.multiply(array_2)
 		//println(result)
-
+        val result = 0
 		val start = System.currentTimeMillis()
 		for (_ <- 1 to executions)
 			result = array_1.multiply(array_2)
 		val end = System.currentTimeMillis()
 
-		average = (end-start)/1000
+		val average = (end-start)/1000
 		println(s"Average time for matrix multiplication is: ${(average)/1000.0} seconds. \n")
 		
 	}
