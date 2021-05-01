@@ -1,5 +1,4 @@
 
-
 object matrix_multiplication{
 	def main(args: Array[String]): Unit = {
 
@@ -28,7 +27,7 @@ object matrix_multiplication{
 			matrix_multiplication(array_1, array_2)
 		val end = System.currentTimeMillis()
 
-        average = (end-start)/executions
+                val average = (end-start)/executions
 		println(s"Average time for matrix multiplication is: ${(average)/1000.0} seconds. \n")
 
 	}
