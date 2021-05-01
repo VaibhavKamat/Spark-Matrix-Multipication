@@ -1,4 +1,3 @@
-
 import scala.collection.mutable.ArrayBuffer
 import breeze.linalg._
 
@@ -21,9 +20,9 @@ object matrix_multiplication_breeze{
 	
 		val start = System.currentTimeMillis()
 		for (_ <- 1 to executions)
-			result = array_1 * array_2
+			val result = array_1 * array_2
 		val end = System.currentTimeMillis()
 	
-		average = (end-start)/executions
+		val average = (end-start)/executions
 		println(s"Average time for matrix multiplication is: ${(average)/1000.0} seconds. \n")
 }
