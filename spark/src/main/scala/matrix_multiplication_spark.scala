@@ -1,4 +1,3 @@
-
 import org.apache.spark.mllib.linalg.DenseMatrix
 
 object matrix_multiplication_spark{
@@ -10,14 +9,13 @@ object matrix_multiplication_spark{
 		}
 		
 		val executions = 1000
-		val mat_A_num_rows = args(0).toInt
-        	val mat_A_num_cols = args(1).toInt
-        	val mat_B_num_rows = args(2).toInt
-        	val mat_B_num_cols = args(3).toInt
+		val n = 1000
+		val array_1 = fill_array(n, n, 100)
+		val array_2 = fill_array(n, n, 100)
 
-        	val mat_A = fill_array(mat_A_num_rows, mat_A_num_cols, 100)
-        	val mat_B = fill_array(mat_B_num_rows, mat_B_num_cols, 100)
-		
+		//var result = array_1.multiply(array_2)
+		//println(result)
+  
 		val start = System.currentTimeMillis()
 		for (_ <- 1 to executions)
 			val result = array_1.multiply(array_2)
@@ -29,4 +27,3 @@ object matrix_multiplication_spark{
 	}
 
 }
-
